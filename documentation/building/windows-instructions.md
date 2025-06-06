@@ -94,7 +94,7 @@ build.cmd
 [Lots of build spew]
 
 BUILD: Repo sucessfully built.
-BUILD: Product binaries are available at c:\git\diagnostics\artifacts\Debug\bin\Windows_NT.x64
+BUILD: Product binaries are available at c:\git\diagnostics\artifacts\Debug\bin\windows.x64
 ```
 
 To build for x86:

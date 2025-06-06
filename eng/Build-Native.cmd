@@ -35,7 +35,7 @@ if /i "%PROCESSOR_ARCHITECTURE%" == "arm64" set __TargetArch=arm64
 if /i "%PROCESSOR_ARCHITECTURE%" == "x86" set __TargetArch=x86
 set __HostArch=
 set __BuildType=Debug
-set __TargetOS=Windows_NT
+set __TargetOS=windows
 set __BuildNative=1
 set __CI=0
 set __Verbosity=minimal
@@ -118,7 +118,7 @@ set "__CMakeBinDir=%__BinDir%"
 set "__CMakeBinDir=%__CMakeBinDir:\=/%"
 
 :: Common msbuild arguments
-set "__CommonBuildArgs=/v:!__Verbosity! /p:Configuration=%__BuildType% /p:TargetOS=%__TargetOS% /p:TargetArch=%__TargetArch% %__UnprocessedBuildArgs%"
+set "__CommonBuildArgs=/v:!__Verbosity! /p:Configuration=%__BuildType% /p:TargetOS=%__TargetOS% /p:TargetArchitecture=%__TargetArch% %__UnprocessedBuildArgs%"
 
 if not exist "%__BinDir%"           md "%__BinDir%"
 if not exist "%__IntermediatesDir%" md "%__IntermediatesDir%"

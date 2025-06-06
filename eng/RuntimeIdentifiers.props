@@ -1,0 +1,10 @@
+<Project>
+  <!--
+    $(TargetRid) - the runtime identifier (rid) to against (win-x64, linux-arm64, linux-musl-x64, etc).
+  -->
+  <PropertyGroup Condition="'$(TargetRid)' == ''">
+    <TargetRidOS>$(TargetOS)</TargetRidOS>
+    <TargetRidOS Condition="'$(TargetOS)' == 'windows'">win</TargetRidOS>
+    <TargetRid>$(TargetRidOS)-$(TargetArchitecture)</TargetRid>
+  </PropertyGroup>
+</Project>

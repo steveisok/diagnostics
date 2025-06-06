@@ -77,11 +77,11 @@ extends:
             artifactUploadPath: bin
           - configuration: Release
             architecture: x86
-            artifactUploadPath: bin/Windows_NT.x86.Release
+            artifactUploadPath: bin/windows.x86.Release
           - ${{ if ne(variables['System.TeamProject'], 'public') }}:
             - configuration: Release
               architecture: arm64
-              artifactUploadPath: bin/Windows_NT.arm64.Release
+              artifactUploadPath: bin/windows.arm64.Release
 
       - template: /eng/pipelines/build.yml
         parameters:

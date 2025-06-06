@@ -193,7 +193,7 @@ if [[ "$__NativeBuild" == 1 ]]; then
         /restore \
         /p:Configuration="$__BuildType" \
         /p:TargetOS="$__TargetOS" \
-        /p:TargetArch="$__TargetArch" \
+        /p:TargetArchitecture="$__TargetArch" \
         /p:TargetRid="$__OutputRid" \
         /p:Platform="$__TargetArch" \
         $__UnprocessedBuildArgs
@@ -221,7 +221,7 @@ if [[ "$__ManagedBuild" == 1 ]]; then
     echo "Commencing managed build for $__BuildType in $__RootBinDir/bin"
     "$__RepoRootDir/eng/common/build.sh" \
         --configuration "$__BuildType" \
-        /p:TargetArch="$__TargetArch" \
+        /p:TargetArchitecture="$__TargetArch" \
         /p:TargetRid="$__OutputRid" \
         $__CommonMSBuildArgs \
         $__ManagedBuildArgs \
@@ -248,7 +248,7 @@ if [[ "$__InstallRuntimes" == 1 || "$__PrivateBuild" == 1 ]]; then
         /bl:"$__LogsDir/InstallRuntimes.binlog" \
         /p:PrivateBuildTesting="$__privateBuildTesting" \
         /p:TargetOS="$__TargetOS" \
-        /p:TargetArch="$__TargetArch" \
+        /p:TargetArchitecture="$__TargetArch" \
         /p:TargetRid="$__OutputRid" \
         /p:TestArchitectures="$__TargetArch" \
         /p:LiveRuntimeDir="$__LiveRuntimeDir" 
@@ -307,7 +307,7 @@ if [[ "$__Test" == 1 ]]; then
         --test \
         --configuration "$__BuildType" \
         /bl:"$__LogsDir"/Test.binlog \
-        /p:TargetArch="$__TargetArch" \
+        /p:TargetArchitecture="$__TargetArch" \
         /p:TargetRid="$__OutputRid" \
         /p:DotnetRuntimeVersion="$__DotnetRuntimeVersion" \
         /p:DotnetRuntimeDownloadVersion="$__DotnetRuntimeDownloadVersion" \

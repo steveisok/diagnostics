@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)ConfigFiles\Windows\Debugger.Tests.Config.txt" Condition="'$(OS)' == 'Windows_NT'">
+    <Content Include="$(MSBuildThisFileDirectory)ConfigFiles\Windows\Debugger.Tests.Config.txt" Condition="'$(BuildOS)' == 'windows'">
       <Link>Debugger.Tests.Config.txt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

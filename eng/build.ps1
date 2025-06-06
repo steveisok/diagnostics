@@ -38,9 +38,9 @@ switch ($configuration.ToLower()) {
 $reporoot = Join-Path $PSScriptRoot ".."
 $engroot = Join-Path $reporoot "eng"
 $artifactsdir = Join-Path $reporoot "artifacts"
-$os = "Windows_NT"
+$os = "windows"
 $logdir = Join-Path $artifactsdir "log"
-$logdir = Join-Path $logdir Windows_NT.$architecture.$configuration
+$logdir = Join-Path $logdir windows.$architecture.$configuration
 
 if ($ci) {
     $remainingargs = "-ci " + $remainingargs
@@ -64,7 +64,7 @@ if (-not $skipnative) {
 
 # Install sdk for building, restore and build managed components.
 if (-not $skipmanaged) {
-    Invoke-Expression "& `"$engroot\common\build.ps1`" -configuration $configuration -verbosity $verbosity /p:TargetOS=$os /p:TargetArch=$architecture /p:TestArchitectures=$architecture $remainingargs"
+    Invoke-Expression "& `"$engroot\common\build.ps1`" -configuration $configuration -verbosity $verbosity /p:TargetOS=$os /p:TargetArchitecture=$architecture /p:TestArchitectures=$architecture $remainingargs"
 
     if ($lastExitCode -ne 0) {
         exit $lastExitCode
@@ -84,7 +84,7 @@ if ($installruntimes -or $privatebuild) {
       /bl:$logdir\InstallRuntimes.binlog `
       /p:PrivateBuildTesting=$privatebuildtesting `
       /p:TargetOS=$os `
-      /p:TargetArch=$architecture `
+      /p:TargetArchitecture=$architecture `
       /p:TestArchitectures=$architecture `
       /p:LiveRuntimeDir="$liveRuntimeDir"
 }
@@ -102,7 +102,7 @@ if ($test) {
           -ci:$ci `
           /bl:$logdir\Test.binlog `
           /p:TargetOS=$os `
-          /p:TargetArch=$architecture `
+          /p:TargetArchitecture=$architecture `
           /p:TestArchitectures=$architecture `
           /p:DotnetRuntimeVersion="$dotnetruntimeversion" `
           /p:DotnetRuntimeDownloadVersion="$dotnetruntimedownloadversion" `

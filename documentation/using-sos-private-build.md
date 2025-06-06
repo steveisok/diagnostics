@@ -9,14 +9,14 @@ Before we can use the private build, of course, we must build it first. [Here](h
 On Windows, [Debugging Tools for Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools) (aka WinDBG) automatically loads a shipped version of sos.dll from the extension gallery whenever it notices a managed runtime is loaded. In order to avoid that behavior, we need to make sure sos is loaded before it encounters the managed runtime, for the launch scenario, we can do this before running anything.
 
 ```
-0:000> .load <reporoot>\artifacts\bin\Windows_NT.x64.Debug\sos.dll
+0:000> .load <reporoot>\artifacts\bin\windows.x64.Debug\sos.dll
 ```
 
 In the attach scenario, we need to do things differently. We couldn't stop WinDBG from loading the shipped sos, but we can replace it.
 
 ```
 0:000> .unload sos
-0:000> .load <reporoot>\artifacts\bin\Windows_NT.x64.Debug\sos.dll
+0:000> .load <reporoot>\artifacts\bin\windows.x64.Debug\sos.dll
 ```
 
 This will ensure you are using your own sos.dll, of course you might have a different full path to `sos.dll`.

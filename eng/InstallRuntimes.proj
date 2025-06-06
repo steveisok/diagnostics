@@ -1,7 +1,7 @@
 <!-- All Rights Reserved. Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license. See the LICENSE file in the project root for more information. -->
 <Project Sdk="Microsoft.Build.NoTargets">
   <!--
-    $(TargetArch) - architecture to test (x64, x86, arm, arm64). Defaults to x64.
+    $(TargetArchitecture) - architecture to test (x64, x86, arm, arm64). Defaults to x64.
     $(LiveRuntimeDir) - path to the locally built runtime to use for testing.
 
     From Versions.props:
@@ -22,12 +22,12 @@
     <LiveRuntimeDir Condition="'$(LiveRuntimeDir)' != ''">$([MSBuild]::NormalizePath('$(LiveRuntimeDir)'))</LiveRuntimeDir>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetArch)' != 'x86'">
+  <PropertyGroup Condition="'$(TargetArchitecture)' != 'x86'">
     <DotNetInstallRoot>$(RepoRoot).dotnet-test\</DotNetInstallRoot>
     <RegistryRoot>HKEY_LOCAL_MACHINE\SOFTWARE</RegistryRoot>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetArch)' == 'x86'">
+  <PropertyGroup Condition="'$(TargetArchitecture)' == 'x86'">
     <DotNetInstallRoot>$(RepoRoot).dotnet-test\x86\</DotNetInstallRoot>
     <RegistryRoot>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node</RegistryRoot>
   </PropertyGroup>

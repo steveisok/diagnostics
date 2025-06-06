@@ -1,7 +1,7 @@
 <!-- All Rights Reserved. Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license. See the LICENSE file in the project root for more information. -->
 <Project>
   <!--
-    $(ArtifactsBinNativeDir) - Native artifacts directory (e.g. artifacts\bin\Windows_NT.x64.Debug).
+    $(ArtifactsBinNativeDir) - Native artifacts directory (e.g. artifacts\bin\windows.x64.Debug).
     $(TargetRid) - Target runtime identifier (e.g. win-x64, linux-x64, osx-x64).
 
     From Versions.props:
@@ -21,7 +21,7 @@
   -->
 
   <ItemGroup>
-    <PackageDownload Include="Microsoft.DiaSymReader.Native" Version="[$(MicrosoftDiaSymReaderNativeVersion)]" Condition="'$(OS)' == 'Windows_NT'" />
+    <PackageDownload Include="Microsoft.DiaSymReader.Native" Version="[$(MicrosoftDiaSymReaderNativeVersion)]" Condition="'$(BuildOS)' == 'windows'" />
     <PackageDownload Include="runtime.win-x64.Microsoft.DotNet.Cdac.Transport" Version="[$(runtimewinx64MicrosoftDotNetCdacTransportVersion)]" Condition="'$(TargetRid)' == 'win-x64'"/>
     <PackageDownload Include="runtime.win-arm64.Microsoft.DotNet.Cdac.Transport" Version="[$(runtimewinarm64MicrosoftDotNetCdacTransportVersion)]" Condition="'$(TargetRid)' == 'win-arm64'"/>
     <PackageDownload Include="runtime.linux-x64.Microsoft.DotNet.Cdac.Transport" Version="[$(runtimelinuxx64MicrosoftDotNetCdacTransportVersion)]" Condition="'$(TargetRid)' == 'linux-x64'"/>
@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageSourceFiles Include="$(NuGetPackageRoot)microsoft.diasymreader.native\$(MicrosoftDiaSymReaderNativeVersion)\runtimes\$(TargetRid)\native\*" Condition="'$(OS)' == 'Windows_NT'" />
+    <PackageSourceFiles Include="$(NuGetPackageRoot)microsoft.diasymreader.native\$(MicrosoftDiaSymReaderNativeVersion)\runtimes\$(TargetRid)\native\*" Condition="'$(BuildOS)' == 'windows'" />
     <PackageSourceFiles Include="$(NuGetPackageRoot)runtime.win-x64.microsoft.dotnet.cdac.transport\$(runtimewinx64MicrosoftDotNetCdacTransportVersion)\runtimes\win-x64\native\*" Condition="'$(TargetRid)' == 'win-x64'" />
     <PackageSourceFiles Include="$(NuGetPackageRoot)runtime.win-arm64.microsoft.dotnet.cdac.transport\$(runtimewinarm64MicrosoftDotNetCdacTransportVersion)\runtimes\win-arm64\native\*" Condition="'$(TargetRid)' == 'win-arm64'" />
     <PackageSourceFiles Include="$(NuGetPackageRoot)runtime.linux-x64.microsoft.dotnet.cdac.transport\$(runtimelinuxx64MicrosoftDotNetCdacTransportVersion)\runtimes\linux-x64\native\*" Condition="'$(TargetRid)' == 'linux-x64'" />

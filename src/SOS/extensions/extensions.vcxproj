@@ -57,19 +57,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\SOS\extensions\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\SOS\extensions\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">extensions.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">extensions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\SOS\extensions\Checked\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\SOS\extensions\Checked\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">extensions.dir\Checked\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">extensions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\SOS\extensions\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\SOS\extensions\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">extensions.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">extensions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\SOS\extensions\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\SOS\extensions\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">extensions.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">extensions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>

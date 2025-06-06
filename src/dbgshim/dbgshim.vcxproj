@@ -60,25 +60,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\dbgshim\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\dbgshim\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dbgshim.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dbgshim</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\dbgshim\Checked\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\dbgshim\Checked\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">dbgshim.dir\Checked\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">dbgshim</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Checked|x64'">false</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\dbgshim\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\dbgshim\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dbgshim.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dbgshim</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ArtifactsObjDir)Windows_NT.x64.Debug\src\dbgshim\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ArtifactsObjDir)windows.x64.Debug\src\dbgshim\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">dbgshim.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">dbgshim</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -143,10 +143,10 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64 /guard:cf /PDBCOMPRESS /IGNORE:4197,4013,4254,4070,4221 /SUBSYSTEM:WINDOWS,6.01 /guard:ehcont /CETCOMPAT</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/Debug/dbgshim.lib</ImportLibrary>
+      <ImportLibrary>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/Debug/dbgshim.lib</ImportLibrary>
       <LargeAddressAware>true</LargeAddressAware>
-      <ModuleDefinitionFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/Debug/dbgshim.pdb</ProgramDataBaseFile>
+      <ModuleDefinitionFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/Debug/dbgshim.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -212,11 +212,11 @@
       <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/Checked/dbgshim.lib</ImportLibrary>
+      <ImportLibrary>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/Checked/dbgshim.lib</ImportLibrary>
       <LargeAddressAware>true</LargeAddressAware>
-      <ModuleDefinitionFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/Checked/dbgshim.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/Checked/dbgshim.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -281,12 +281,12 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>libucrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/Release/dbgshim.lib</ImportLibrary>
+      <ImportLibrary>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/Release/dbgshim.lib</ImportLibrary>
       <LargeAddressAware>true</LargeAddressAware>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <ModuleDefinitionFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/Release/dbgshim.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/Release/dbgshim.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -351,12 +351,12 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/RelWithDebInfo/dbgshim.lib</ImportLibrary>
+      <ImportLibrary>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/RelWithDebInfo/dbgshim.lib</ImportLibrary>
       <LargeAddressAware>true</LargeAddressAware>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <ModuleDefinitionFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/dbgshim.def</ModuleDefinitionFile>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>$(ArtifactsObjDir)Windows_NT.x64.Debug/src/dbgshim/RelWithDebInfo/dbgshim.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(ArtifactsObjDir)windows.x64.Debug/src/dbgshim/RelWithDebInfo/dbgshim.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

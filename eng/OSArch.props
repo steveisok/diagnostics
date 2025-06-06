@@ -1,0 +1,19 @@
+<Project>
+  <!--
+    $(TargetOS) - target operating system (win, linux, osx). Defaults to host OS.
+    $(TargetArchitecture) - architecture to test (x64, x86, arm, arm64). Defaults to host architecture.
+  -->
+  <PropertyGroup>
+    <BuildOS>linux</BuildOS>
+    <BuildOS Condition="$([MSBuild]::IsOSPlatform('OSX'))">osx</BuildOS>
+    <BuildOS Condition="$([MSBuild]::IsOSPlatform('WINDOWS'))">windows</BuildOS>
+  
+    <TargetOS Condition="'$(TargetOS)' == ''">$(BuildOS)</TargetOS>
+    <HostOS Condition="'$(HostOS)' == ''">$(TargetOS)</HostOS>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetArchitecture Condition="'$(TargetArchitecture)' == ''">$(Platform)</TargetArchitecture>
+    <TargetArchitecture  Condition="'$(TargetArchitecture)' == 'AnyCpu'">$([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture.ToString().ToLowerInvariant)</TargetArchitecture>
+  </PropertyGroup>
+</Project>
